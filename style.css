@@ -1,0 +1,71 @@
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.container{
+    margin: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+ 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  [class*='col'] {
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+#questions {
+    font-size: 2em;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.buttons {
+    border: 1px solid white;
+}
+
+.button {
+    background-color: #C3C2C6;
+    min-height: 6em;
+    font-size: 1em;
+    border: 1px solid white;
+}
+
+#results {
+    font-size: 2em;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.score {
+    font-size: 2em;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.sm-button {
+    font-size: 2em;
+    border: 2px solid white;
+    text-align: center;
+}
+  
+  @media screen and (min-width: 600px) {
+    .col {
+      flex: 1;
+    }
+    .score  { width: 25%; }
+    .button { width: 50%; }
+
+  }
