@@ -1,3 +1,5 @@
+
+
 // Functions
 // start game
 // generate question and answers
@@ -14,6 +16,14 @@
 // 
 // need library of questions
 // 
+window.onload = getOpenTrivia
+
+async function getOpenTrivia() {
+    let response = await fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple');
+    let data = await response.json()
+    return data;
+}
+ getOpenTrivia().then((data) => console.log(data.results));
 // 
 // 
 // 
@@ -21,6 +31,4 @@
 // 
 // 
 // 
-// 
-// 
-// 
+// https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple
