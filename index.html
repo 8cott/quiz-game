@@ -13,16 +13,20 @@
     <h1>Quiz Game!</h1>
     <!-- We need a space to ask the questions -->
     <div class='container'>
-    <div class='row' id='questions'>
-        <div class='col'>Questions</div>
+    <div class='row' id='questions'> <!-- QUESTIONS -->
+        <div class='col' id='question'></div>
+      </div>
+      <div class='row buttons '> <!-- STATS -->
+        <button class='stats' id='category'></button>
+        <button class='stats' id='difficulty'></button>
       </div>
       <br>
       <!-- Then a group of 4 buttons with multiple choice answers -->
-      <div class='row buttons'>
-        <button type='button' class='button' id='answer-1'>Answer 1</button>
-        <button type='button' class='button' id='answer-2'>Answer 2</button>
-        <button type='button' class='button' id='answer-1'>Answer 1</button>
-        <button type='button' class='button' id='answer-2'>Answer 2</button>
+      <div class='row answers' id='answers'> <!-- ANSWERS -->
+        <button type='button' class='answer' id='answer1'>Answer 1</button>
+        <button type='button' class='answer' id='answer2'>Answer 2</button>
+        <button type='button' class='answer' id='answer3'>Answer 1</button>
+        <button type='button' class='answer' id='answer4'>Answer 2</button>
       </div>
          <br>
          <!-- Then we need to show the results -->
