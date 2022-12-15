@@ -58,6 +58,22 @@ body {
     border: 1px solid white;
 }
 
+.incorrectClass {
+    background-color: red;
+    color: white;
+    min-height: 6em;
+    font-size: 1em;
+    border: 1px solid white;
+}
+
+.correctClass {
+    background-color: green;
+    color: white;
+    min-height: 6em;
+    font-size: 1em;
+    border: 1px solid white;
+}
+
 .answers {
     border: 1px solid white;
 }
