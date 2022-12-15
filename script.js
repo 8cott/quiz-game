@@ -1,12 +1,4 @@
-// Functions
-function correct(ans) {
-  document.getElementById(ans).classList.add('correctClass');
-  document.getElementById('results').innerHTML = 'Correct';
-}
-function incorrect(ans) {
-  document.getElementById(ans).classList.add('incorrectClass');
-  document.getElementById('results').innerHTML = 'Incorrect';
-}
+
 // load Open Trivia Library
 
 // window.onload = getOpenTrivia
@@ -40,15 +32,20 @@ getOpenTrivia().then((data) => {
     let index = i + 1;
     document.getElementById(`answer${index}`).innerHTML = answers[i]; // INCORRECT ANSWERS
     document.getElementById(`answer${index}`).value = answers[i];
+
   }
  
   // click button 1
   const clickButton1 = document.getElementById('answer1');
   clickButton1.addEventListener('click', () => {
     if (clickButton1.value === results.correct_answer) {
-      correct('answer1')
+      document.getElementById('answer1').classList.add('correctClass');
+      document.getElementById('results').innerHTML = 'Correct! 😀';
+      document.getElementById('results').classList.add('correctResClass');
     } else {
-      incorrect('answer1')
+      document.getElementById('answer1').classList.add('incorrectClass');
+      document.getElementById('results').classList.add('incorrectResClass');
+      document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is: ${results.correct_answer}`;
     }
   });
 
@@ -56,9 +53,13 @@ getOpenTrivia().then((data) => {
   const clickButton2 = document.getElementById('answer2');
   clickButton2.addEventListener('click', () => {
     if (clickButton2.value === results.correct_answer) {
-      correct('answer2')
+      document.getElementById('answer2').classList.add('correctClass');
+      document.getElementById('results').innerHTML = 'Correct! 😀';
+      document.getElementById('results').classList.add('correctResClass');
     } else {
-      incorrect('answer2')
+      document.getElementById('answer2').classList.add('incorrectClass');
+      document.getElementById('results').classList.add('incorrectResClass');
+      document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
     }
   });
 
@@ -66,9 +67,13 @@ getOpenTrivia().then((data) => {
   const clickButton3 = document.getElementById('answer3');
   clickButton3.addEventListener('click', () => {
     if (clickButton3.value === results.correct_answer) {
-      correct('answer3')
+      document.getElementById('answer3').classList.add('correctClass');
+      document.getElementById('results').innerHTML = 'Correct! 😀';
+      document.getElementById('results').classList.add('correctResClass');
     } else {
-      incorrect('answer3')
+      document.getElementById('answer3').classList.add('incorrectClass');
+      document.getElementById('results').classList.add('incorrectResClass');
+      document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
     }
   });
 
@@ -76,9 +81,13 @@ getOpenTrivia().then((data) => {
   const clickButton4 = document.getElementById('answer4');
   clickButton4.addEventListener('click', () => {
     if (clickButton4.value === results.correct_answer) {
-      correct('answer4')
+      document.getElementById('answer4').classList.add('correctClass');
+      document.getElementById('results').innerHTML = 'Correct! 😀';
+      document.getElementById('results').classList.add('correctResClass');
     } else {
-      incorrect('answer4')
+      document.getElementById('answer4').classList.add('incorrectClass');
+      document.getElementById('results').classList.add('incorrectResClass');
+      document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
     }
   });
 });

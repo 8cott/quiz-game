@@ -1,6 +1,5 @@
 h1 {
-    font-size: 2em;
-    text-align: center;
+    font-size: 2em;  
 }
 
 .container{
@@ -10,6 +9,7 @@ h1 {
 }
 
 body {
+    text-align: center;
     background-color: black;
     color: white;
 }
@@ -19,18 +19,38 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
-.col {
-    padding: 1em;
-    width: 100%;
-    box-sizing: border-box;
+
+.res-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-#questions {
+.q-row {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 2em;
     border: 2px solid white;
-    text-align: center;
-}
+  }
+
+.btn-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+.sc-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+.col {
+    display: flex;
+    padding: 1em;
+    width: 100%;
+    justify-content: center;
+  }
 
 .stats {
     background-color: black;
@@ -56,6 +76,7 @@ body {
     min-height: 6em;
     font-size: 1em;
     border: 1px solid white;
+    
 }
 
 .incorrectClass {
@@ -81,27 +102,37 @@ body {
 #results {
     font-size: 2em;
     border: 2px solid white;
-    text-align: center;
+}
+
+.correctResClass {
+    font-size: 2em;
+    color: green;
+    border: 2px solid green;
+}
+
+.incorrectResClass {
+    font-size: 2em;
+    color: red;
+    border: 2px solid red;
 }
 
 .score {
     font-size: 2em;
     border: 2px solid white;
-    text-align: center;
 }
 
 .sm-button {
     font-size: 2em;
     border: 2px solid white;
-    text-align: center;
 }
   
   @media screen and (min-width: 600px) {
+
     .col {
       flex: 1;
     }
-    .score  { width: 25%; }
-    .button { width: 50%; }
+    .score { width: 25%; }
+    #answer { width: 50%; }
     .answer { width: 50%; }
     .stats { width: 50%; }
   }
