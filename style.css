@@ -4,10 +4,11 @@ h1 {
 }
 
 .container{
-    margin: 2em;
-    padding-left: 10em;
-    padding-right: 10em;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     justify-content: center;
+    max-width: 60rem;
+    min-width: 20rem;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
 .col2 {
     display: flex;
     flex-wrap: wrap;
+
     width: 100%;
     box-sizing: border-box;
   }
@@ -133,6 +135,7 @@ body {
     font-size: 2em;
     border: 2px solid white;
     text-align: center;
+    border-radius: 15px 15px;
 }
 
 .sm-button {
@@ -141,7 +144,7 @@ body {
     text-align: center;
 }
   
-  @media screen and (min-width: 600px) {
+  @media (min-width: 40em) {
     .col {
       flex: 1;
     }
@@ -149,4 +152,10 @@ body {
     .button { width: 50%; }
     .answer { width: 50%; }
     .stats { width: 50%; }
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 60rem;
+        min-width: 20rem;
+    }
   }
