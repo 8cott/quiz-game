@@ -1,15 +1,16 @@
 h1 {
-    font-size: 2em;  
+    font-size: 3em;
+    text-align: center;
 }
 
 .container{
     margin: 2em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 10em;
+    padding-right: 10em;
+    justify-content: center;
 }
 
 body {
-    text-align: center;
     background-color: black;
     color: white;
 }
@@ -19,38 +20,36 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-.res-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-.q-row {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 2em;
-    border: 2px solid white;
-  }
-
-.btn-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-.sc-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
   
 .col {
+    justify-content: center;
+    align-items: center;
     display: flex;
     padding: 1em;
     width: 100%;
-    justify-content: center;
+    box-sizing: border-box;
   }
+
+.col2 {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+.col3 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+#questions {
+    font-size: 2em;
+    border: 2px solid white;
+    text-align: center;
+}
 
 .stats {
     background-color: black;
@@ -76,7 +75,20 @@ body {
     min-height: 6em;
     font-size: 1em;
     border: 1px solid white;
-    
+    width: 100%;
+}
+
+.stats {
+    background-color: black;
+    color: white;
+    min-height: 3em;
+    font-size: 1em;
+    border: 1px solid white;
+    width: 100%;
+}
+
+.answers {
+    border: 1px solid white;
 }
 
 .incorrectClass {
@@ -95,44 +107,44 @@ body {
     border: 1px solid white;
 }
 
-.answers {
-    border: 1px solid white;
-}
-
 #results {
     font-size: 2em;
     border: 2px solid white;
+    text-align: center;
 }
 
 .correctResClass {
     font-size: 2em;
     color: green;
     border: 2px solid green;
+    text-align: center;
 }
 
 .incorrectResClass {
     font-size: 2em;
     color: red;
     border: 2px solid red;
+    text-align: center;
 }
 
 .score {
     font-size: 2em;
     border: 2px solid white;
+    text-align: center;
 }
 
 .sm-button {
     font-size: 2em;
     border: 2px solid white;
+    text-align: center;
 }
   
   @media screen and (min-width: 600px) {
-
     .col {
       flex: 1;
     }
     .score { width: 25%; }
-    #answer { width: 50%; }
+    .button { width: 50%; }
     .answer { width: 50%; }
     .stats { width: 50%; }
   }

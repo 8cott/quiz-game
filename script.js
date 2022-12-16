@@ -24,8 +24,8 @@ function shuffleAray(arr) {
 getOpenTrivia().then((data) => {
   const results = data.results[0];
   document.getElementById('question').innerHTML = results.question; // QUESTION
-  document.getElementById('category').innerHTML = results.category; // CATEGORY
-  document.getElementById('difficulty').innerHTML = results.difficulty; // DIFFICULTY
+  document.getElementById('category').innerHTML = `Category: ${results.category}`; // CATEGORY
+  document.getElementById('difficulty').innerHTML = `Difficulty: ${results.difficulty}`; // DIFFICULTY
   const answers = [...results.incorrect_answers, results.correct_answer]; // ANSWERS
   shuffleAray(answers);
   for (let i = 0; i < 4; i++) {
