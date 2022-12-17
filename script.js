@@ -1,4 +1,3 @@
-
 // load Open Trivia Library
 window.onload = newQuestion()
 
@@ -15,6 +14,7 @@ function increaseScore() {
 function resetScore() {
   score = 0;
 }
+
 
 // button to advance to next question
 function nextQuestion(){
