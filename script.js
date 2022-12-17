@@ -3,12 +3,25 @@
 window.onload = newQuestion()
 
 // score
-let score = 0
+let score = 0;
 
-function buttonFunction(){
+// increase score
+function increaseScore() {
+  score += 10;
+  document.getElementById('score').innerHTML = score
+}
+
+// reset score
+function resetScore() {
+  score = 0;
+}
+
+// button to advance to next question
+function nextQuestion(){
   document.getElementById('buttonAppear').innerHTML = '<button onclick=clearCorrect();clearIncorrect();newQuestion()>Next Question</button>';
 }
 
+// clear CSS from buttons and results
 function clearCorrect() {
   document.getElementById('answer1').classList.remove('correctClass');
   document.getElementById('answer2').classList.remove('correctClass');
@@ -27,6 +40,7 @@ function clearIncorrect() {
   document.getElementById('results').classList.remove('incorrectResClass');
 }
 
+// generates new question
 function newQuestion() {
   const api =
   'https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple';
@@ -65,13 +79,13 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer1').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
-      score = score + 1;
-      buttonFunction()
+      nextQuestion();
+      increaseScore();
     } else {
       document.getElementById('answer1').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is: ${results.correct_answer}`;
-      buttonFunction()
+      nextQuestion();
     }
   });
 
@@ -82,13 +96,13 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer2').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
-      score = score + 1;
-      buttonFunction()
+      nextQuestion();
+      increaseScore();
     } else {
       document.getElementById('answer2').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
-      buttonFunction()
+      nextQuestion()
     }
   });
 
@@ -99,13 +113,13 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer3').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
-      score = score + 1;
-      buttonFunction()
+      nextQuestion();
+      increaseScore();
     } else {
       document.getElementById('answer3').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
-      buttonFunction()
+      nextQuestion();
     }
   });
 
@@ -116,13 +130,13 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer4').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
-      score = score + 1;
-      buttonFunction()
+      nextQuestion();
+      increaseScore();
     } else {
       document.getElementById('answer4').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
-      buttonFunction()
+      nextQuestion();
     }
   });
 });
