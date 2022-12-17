@@ -132,10 +132,7 @@ body {
 }
 
 .score {
-    font-size: 2em;
-    border: 2px solid white;
-    text-align: center;
-    border-radius: 15px 15px;
+    font-size: 2rem;
 }
 
 .sm-button {
@@ -148,7 +145,7 @@ body {
     .col {
       flex: 1;
     }
-    .score { width: 25%; }
+ 
     .button { width: 50%; }
     .answer { width: 50%; }
     .stats { width: 50%; }

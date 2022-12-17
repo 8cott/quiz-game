@@ -1,9 +1,34 @@
 
 // load Open Trivia Library
+window.onload = newQuestion()
 
-// window.onload = getOpenTrivia
+// score
+let score = 0
 
-const api =
+function buttonFunction(){
+  document.getElementById('buttonAppear').innerHTML = '<button onclick=clearCorrect();clearIncorrect();newQuestion()>Next Question</button>';
+}
+
+function clearCorrect() {
+  document.getElementById('answer1').classList.remove('correctClass');
+  document.getElementById('answer2').classList.remove('correctClass');
+  document.getElementById('answer3').classList.remove('correctClass');
+  document.getElementById('answer4').classList.remove('correctClass');
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('results').classList.remove('correctResClass');
+}
+
+function clearIncorrect() {
+  document.getElementById('answer1').classList.remove('incorrectClass');
+  document.getElementById('answer2').classList.remove('incorrectClass');
+  document.getElementById('answer3').classList.remove('incorrectClass');
+  document.getElementById('answer4').classList.remove('incorrectClass');
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('results').classList.remove('incorrectResClass');
+}
+
+function newQuestion() {
+  const api =
   'https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple';
 // Async Function to fetch API data
 async function getOpenTrivia() {
@@ -19,8 +44,7 @@ function shuffleAray(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
-
-// get specific items from API array
+  // get specific items from API array
 getOpenTrivia().then((data) => {
   const results = data.results[0];
   document.getElementById('question').innerHTML = results.question; // QUESTION
@@ -32,7 +56,6 @@ getOpenTrivia().then((data) => {
     let index = i + 1;
     document.getElementById(`answer${index}`).innerHTML = answers[i]; // INCORRECT ANSWERS
     document.getElementById(`answer${index}`).value = answers[i];
-
   }
  
   // click button 1
@@ -42,10 +65,13 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer1').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
+      score = score + 1;
+      buttonFunction()
     } else {
       document.getElementById('answer1').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is: ${results.correct_answer}`;
+      buttonFunction()
     }
   });
 
@@ -56,10 +82,13 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer2').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
+      score = score + 1;
+      buttonFunction()
     } else {
       document.getElementById('answer2').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
+      buttonFunction()
     }
   });
 
@@ -70,10 +99,13 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer3').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
+      score = score + 1;
+      buttonFunction()
     } else {
       document.getElementById('answer3').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
+      buttonFunction()
     }
   });
 
@@ -84,10 +116,16 @@ getOpenTrivia().then((data) => {
       document.getElementById('answer4').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
       document.getElementById('results').classList.add('correctResClass');
+      score = score + 1;
+      buttonFunction()
     } else {
       document.getElementById('answer4').classList.add('incorrectClass');
       document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
+      buttonFunction()
     }
   });
 });
+
+}
+
