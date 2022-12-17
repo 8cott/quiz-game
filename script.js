@@ -15,10 +15,23 @@ function resetScore() {
   score = 0;
 }
 
+// question number
+let questionNumber = 1;
+
+// increase question number
+function increaseQuestionNum() {
+  questionNumber += 1;
+  document.getElementById('questionNum').innerHTML = questionNumber
+}
+
+// reset questions asked
+function resetQuestions() {
+  questionNumber = 0;
+}
 
 // button to advance to next question
 function nextQuestion(){
-  document.getElementById('buttonAppear').innerHTML = '<button onclick=clearCorrect();clearIncorrect();newQuestion()>Next Question</button>';
+  document.getElementById('buttonAppear').innerHTML = '<button onclick=clearCorrect();clearIncorrect();newQuestion();increaseQuestionNum();>Next Question</button>';
 }
 
 // clear CSS from buttons and results

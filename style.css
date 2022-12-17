@@ -156,7 +156,6 @@ h1 {
     .container{
         padding-left: 2rem;
         padding-right: 2rem;
-        max-width: 60rem;
-        min-width: 20rem;
+        width: 85%
     }
   }
