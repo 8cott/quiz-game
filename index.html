@@ -5,6 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Quiz Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='style.css'> 
 </head>
 <script src='script.js'></script>
@@ -49,10 +50,25 @@
       </div>
     </div>
       <br>
-      </div>
-    </div>
-</div>
-</div>
+<!-- Next Question Modal - - - - - - - - - - - - - - - - - - - - - --> 
+<section class='modal hidden' id='modal'> <!-- MODAL -->
+  <div class='flex'>
+  </div>
+  <div>
+    <h2>Next Question</h2>
+  </div>
+  <button class='btn' id='modal-btn' onclick = 'newQ()'>OK</button>
+</section>
+<!-- Game Over Modal - - - - - - - - - - - - - - - - - - - - - -->
+<section class='modal hidden' id='modal-gameOver'> <!-- MODAL -->
+  <div class='flex'>
+  </div>
+  <div>
+    <h2>Game Over!</h2>
+  </div>
+  <button class='btn' id='modal-btn-gameOver' onclick = 'gameOver()'>OK</button>
+</section>
+<div class="overlay hidden"></div>
       <script src='script.js'></script>    
 </body>
 </html>

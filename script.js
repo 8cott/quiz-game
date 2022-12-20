@@ -29,11 +29,6 @@ function resetQuestions() {
   questionNumber = 0;
 }
 
-// button to advance to next question
-function nextQuestion(){
-  document.getElementById('buttonAppear').innerHTML = '<button onclick=clearCorrect();clearIncorrect();newQuestion();increaseQuestionNum();>Next Question</button>';
-}
-
 // clear CSS from buttons and results
 function clearCorrect() {
   document.getElementById('answer1').classList.remove('correctClass');
@@ -41,7 +36,6 @@ function clearCorrect() {
   document.getElementById('answer3').classList.remove('correctClass');
   document.getElementById('answer4').classList.remove('correctClass');
   document.getElementById('results').innerHTML = '';
-  document.getElementById('results').classList.remove('correctResClass');
 }
 
 function clearIncorrect() {
@@ -50,7 +44,31 @@ function clearIncorrect() {
   document.getElementById('answer3').classList.remove('incorrectClass');
   document.getElementById('answer4').classList.remove('incorrectClass');
   document.getElementById('results').innerHTML = '';
-  document.getElementById('results').classList.remove('incorrectResClass');
+}
+
+// Modal Functions
+function openModal() {
+  document.getElementById('modal').classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.add('hidden');
+}
+//^ *******************************************************
+//^ *******************************************************
+//^ *******************************************************
+//^ *******************************************************
+
+function gameOver() {
+  document.getElementById('modal-gameOver').classList.remove('hidden');
+}
+
+function newQ() {
+    clearCorrect();
+    clearIncorrect();
+    newQuestion();
+    increaseQuestionNum();
+    closeModal();
 }
 
 // generates new question
@@ -85,73 +103,106 @@ getOpenTrivia().then((data) => {
     document.getElementById(`answer${index}`).value = answers[i];
   }
  
-  // click button 1
+  // click button 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   const clickButton1 = document.getElementById('answer1');
   clickButton1.addEventListener('click', () => {
     if (clickButton1.value === results.correct_answer) {
       document.getElementById('answer1').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
-      document.getElementById('results').classList.add('correctResClass');
-      nextQuestion();
       increaseScore();
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     } else {
       document.getElementById('answer1').classList.add('incorrectClass');
-      document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is: ${results.correct_answer}`;
-      nextQuestion();
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     }
   });
 
-  // click button 2
+  // click button 2 - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   const clickButton2 = document.getElementById('answer2');
   clickButton2.addEventListener('click', () => {
     if (clickButton2.value === results.correct_answer) {
       document.getElementById('answer2').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
-      document.getElementById('results').classList.add('correctResClass');
-      nextQuestion();
       increaseScore();
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     } else {
       document.getElementById('answer2').classList.add('incorrectClass');
-      document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
-      nextQuestion()
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     }
   });
 
-  // click button 3
+  // click button 3 - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   const clickButton3 = document.getElementById('answer3');
   clickButton3.addEventListener('click', () => {
     if (clickButton3.value === results.correct_answer) {
       document.getElementById('answer3').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
-      document.getElementById('results').classList.add('correctResClass');
-      nextQuestion();
       increaseScore();
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     } else {
       document.getElementById('answer3').classList.add('incorrectClass');
-      document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
-      nextQuestion();
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     }
   });
 
-  // click button 4
+  // click button 4 - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   const clickButton4 = document.getElementById('answer4');
   clickButton4.addEventListener('click', () => {
     if (clickButton4.value === results.correct_answer) {
       document.getElementById('answer4').classList.add('correctClass');
       document.getElementById('results').innerHTML = 'Correct! 😀';
-      document.getElementById('results').classList.add('correctResClass');
-      nextQuestion();
       increaseScore();
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     } else {
       document.getElementById('answer4').classList.add('incorrectClass');
-      document.getElementById('results').classList.add('incorrectResClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
-      nextQuestion();
+      if (questionNumber === 10) {
+        gameOver();
+      } else {
+      setTimeout(function() {
+        openModal();
+      }, 500)}
     }
   });
+  
 });
 
 }
