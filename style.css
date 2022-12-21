@@ -27,7 +27,8 @@ p {
 h1 {
     font-size: 4em;
     text-align: center;
-    font-family: 'Bangers'
+    font-family: 'Bangers';
+    -webkit-text-stroke: 0.5px black;
 }
 
 h2 {
@@ -70,6 +71,7 @@ h2 {
     border: 2px solid white;
     text-align: center;
     border-radius: 15px 15px;
+    background-color: black;
 }
 
 .stats {
@@ -80,6 +82,7 @@ h2 {
     border: 1px solid white;
     border-radius: 15px 15px;
     width: 100%;
+    margin: 2px
 }
 
 .buttons {
@@ -103,8 +106,6 @@ h2 {
     margin: 2px;
 }
 
- 
-
 .incorrectClass {
     background-color: red;
     color: white;
@@ -124,7 +125,9 @@ h2 {
 #results {
     font-size: 2em;
     border: 2px solid white;
+    border-radius: 15px 15px;
     text-align: center;
+    background-color: black;
 }
 
 .correctResClass {
@@ -149,6 +152,7 @@ h2 {
     border: 1px solid white;
     border-radius: 15px 15px;
     width: 100%;
+    margin: 2px;
 }
 
 .qNum {
@@ -176,7 +180,7 @@ h2 {
     padding: 1.3rem;
     position: absolute;
     top: 20%;
-    background-color: rgba(159, 159, 159, 0.783);
+    background-color: rgba(0, 0, 0, 0.044);
     border: 1px solid #ddd;
     border-radius: 15px;
     width: 20rem;
@@ -251,6 +255,11 @@ h2 {
 
   .hidden {
     display: none;
+  }
+
+  #footer {
+    font-size: 0.8rem;
+    text-align: center;
   }
 
  /* MODALS - - - - - - - - - - - - - - - - - - - - - - - - */

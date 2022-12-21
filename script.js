@@ -61,14 +61,14 @@ function closeModal() {
 function gameOver() {
   document.getElementById('modal-gameOver').classList.remove('hidden');
   document.getElementById('overlay2').classList.remove('hidden');
-  document.getElementById('finalScore').innerHTML = `Final Score: ${score}/10`;
+  document.getElementById('finalScore').innerHTML = `Final Score: ${score}/100`;
 }
 
 // function to ask a new question
 function newQ() {
+    newQuestion();
     clearCorrect();
     clearIncorrect();
-    newQuestion();
     increaseQuestionNum();
     closeModal();
 }
