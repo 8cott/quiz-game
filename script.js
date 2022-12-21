@@ -49,20 +49,22 @@ function clearIncorrect() {
 // Modal Functions
 function openModal() {
   document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('overlay').classList.remove('hidden');
 }
 
 function closeModal() {
   document.getElementById('modal').classList.add('hidden');
+  document.getElementById('overlay').classList.add('hidden');
 }
-//^ *******************************************************
-//^ *******************************************************
-//^ *******************************************************
-//^ *******************************************************
 
+// function to open 'gameOver' modal
 function gameOver() {
   document.getElementById('modal-gameOver').classList.remove('hidden');
+  document.getElementById('overlay2').classList.remove('hidden');
+  document.getElementById('finalScore').innerHTML = `Final Score: ${score}/10`;
 }
 
+// function to ask a new question
 function newQ() {
     clearCorrect();
     clearIncorrect();
@@ -75,7 +77,8 @@ function newQ() {
 function newQuestion() {
   const api =
   'https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple';
-// Async Function to fetch API data
+
+  // Async Function to fetch API data
 async function getOpenTrivia() {
   let response = await fetch(api);
   let data = await response.json();
@@ -111,20 +114,22 @@ getOpenTrivia().then((data) => {
       document.getElementById('results').innerHTML = 'Correct! 😀';
       increaseScore();
       if (questionNumber === 10) {
+      setTimeout(function() {
         gameOver();
-      } else {
+        }, 750)} else {
       setTimeout(function() {
         openModal();
-      }, 500)}
+        }, 750)}
     } else {
       document.getElementById('answer1').classList.add('incorrectClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is: ${results.correct_answer}`;
       if (questionNumber === 10) {
-        gameOver();
-      } else {
-      setTimeout(function() {
-        openModal();
-      }, 500)}
+        setTimeout(function() {
+          gameOver();
+          }, 750)} else {
+        setTimeout(function() {
+          openModal();
+          }, 750)}
     }
   });
 
@@ -136,20 +141,22 @@ getOpenTrivia().then((data) => {
       document.getElementById('results').innerHTML = 'Correct! 😀';
       increaseScore();
       if (questionNumber === 10) {
-        gameOver();
-      } else {
-      setTimeout(function() {
-        openModal();
-      }, 500)}
+        setTimeout(function() {
+          gameOver();
+          }, 750)} else {
+        setTimeout(function() {
+          openModal();
+          }, 750)}
     } else {
       document.getElementById('answer2').classList.add('incorrectClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
       if (questionNumber === 10) {
-        gameOver();
-      } else {
-      setTimeout(function() {
-        openModal();
-      }, 500)}
+        setTimeout(function() {
+          gameOver();
+          }, 750)} else {
+        setTimeout(function() {
+          openModal();
+          }, 750)}
     }
   });
 
@@ -161,20 +168,22 @@ getOpenTrivia().then((data) => {
       document.getElementById('results').innerHTML = 'Correct! 😀';
       increaseScore();
       if (questionNumber === 10) {
-        gameOver();
-      } else {
-      setTimeout(function() {
-        openModal();
-      }, 500)}
+        setTimeout(function() {
+          gameOver();
+          }, 750)} else {
+        setTimeout(function() {
+          openModal();
+          }, 750)}
     } else {
       document.getElementById('answer3').classList.add('incorrectClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
       if (questionNumber === 10) {
-        gameOver();
-      } else {
-      setTimeout(function() {
-        openModal();
-      }, 500)}
+        setTimeout(function() {
+          gameOver();
+          }, 750)} else {
+        setTimeout(function() {
+          openModal();
+          }, 750)}
     }
   });
 
@@ -186,24 +195,24 @@ getOpenTrivia().then((data) => {
       document.getElementById('results').innerHTML = 'Correct! 😀';
       increaseScore();
       if (questionNumber === 10) {
-        gameOver();
-      } else {
-      setTimeout(function() {
-        openModal();
-      }, 500)}
+        setTimeout(function() {
+          gameOver();
+          }, 500)} else {
+        setTimeout(function() {
+          openModal();
+          }, 500)}
     } else {
       document.getElementById('answer4').classList.add('incorrectClass');
       document.getElementById('results').innerHTML = `Incorrect! 🤨 The correct answer is ${results.correct_answer}`;
       if (questionNumber === 10) {
-        gameOver();
-      } else {
-      setTimeout(function() {
-        openModal();
-      }, 500)}
+        setTimeout(function() {
+          gameOver();
+          }, 500)} else {
+        setTimeout(function() {
+          openModal();
+          }, 500)}
     }
   });
-  
 });
-
 }
 

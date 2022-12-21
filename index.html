@@ -59,16 +59,18 @@
   </div>
   <button class='btn' id='modal-btn' onclick = 'newQ()'>OK</button>
 </section>
+<div class="overlay hidden" id='overlay'></div>
 <!-- Game Over Modal - - - - - - - - - - - - - - - - - - - - - -->
 <section class='modal hidden' id='modal-gameOver'> <!-- MODAL -->
   <div class='flex'>
   </div>
   <div>
     <h2>Game Over!</h2>
+    <p id='finalScore'></p>
   </div>
-  <button class='btn' id='modal-btn-gameOver' onclick = 'gameOver()'>OK</button>
+  <button class='btn' id='modal-btn-gameOver' onclick = 'location.reload()'>Play Again</button>
 </section>
-<div class="overlay hidden"></div>
+<div class="overlay2 hidden" id='overlay2'></div>
       <script src='script.js'></script>    
 </body>
 </html>
