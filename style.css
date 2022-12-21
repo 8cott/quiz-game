@@ -191,6 +191,7 @@ h2 {
     bottom: 0;
     margin: auto;
     text-align: center;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     z-index: 2;
   }
