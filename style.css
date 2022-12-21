@@ -65,16 +65,11 @@ h2 {
     box-sizing: border-box;
   }
 
-  .col4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
 #questions {
     font-size: 2em;
     border: 2px solid white;
     text-align: center;
+    border-radius: 15px 15px;
 }
 
 .stats {
@@ -104,11 +99,11 @@ h2 {
     font-size: 1em;
     border: 1px solid white;
     width: 100%;
+    border-radius: 15px 15px;
+    margin: 2px;
 }
 
-.answers {
-    border: 1px solid white;
-}
+ 
 
 .incorrectClass {
     background-color: red;
@@ -147,15 +142,26 @@ h2 {
 }
 
 .score {
+    background-color: black;
+    color: white;
+    min-height: 3em;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 15px 15px;
+    width: 100%;
+}
+
+.qNum {
     font-size: 1.5rem;
+    display: flex;
+    justify-content: start; 
+    width: 50%;
 }
 
-#score {
- }
-
-#questionNum {
-
-}
+.col4 {
+    display: flex;
+    justify-content: space-between;
+  }
 
 .sm-button {
     font-size: 2em;
@@ -189,12 +195,6 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
- button {
-    cursor: pointer;
-    border: none;
-    font-weight: 600;
   }
 
   .btn {
@@ -260,7 +260,10 @@ h2 {
       flex: 1;
     }
     .button { width: 50%; }
-    .answer { width: 50%; }
+    .answer { width: 49%; }
+    #answers {
+        justify-content: center;
+    }
     .stats { 
         width: 40%; 
         margin: 0 1em 0 1em;
@@ -269,8 +272,9 @@ h2 {
         justify-content: center;
     }
 
-    .col4 {
-        justify-content: center;
+    .score { 
+        width: 40%; 
+        margin: 0 1em 0 1em;
     }
     
     .container{
