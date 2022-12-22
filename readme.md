@@ -1,6 +1,8 @@
 Quiz Game! by Scott Rubin
 GitHub Username: 8cott
 
+URL to play game: https://8cott.github.io/quiz-game/
+
 Inspiration:
 I always liked to play quiz/trivia games to test my knowledge and I thought it would be the perfect format to use the skills I learned so far in HTML, CSS, and Javascript. My goal was to start simple and then make it more complex as time allowed. I have so many more ideas that I won't have time for, but will try to add them in the future. 
 

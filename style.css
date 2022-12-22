@@ -263,8 +263,6 @@ h2 {
     text-align: center;
   }
 
- /* MODALS - - - - - - - - - - - - - - - - - - - - - - - - */
-
   @media (min-width: 40rem) {
     .col {
       flex: 1;
