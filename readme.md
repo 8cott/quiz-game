@@ -1,27 +1,41 @@
-Quiz Game! by Scott Rubin
-GitHub Username: 8cott
+# Quiz Game!
+This game was my first milestone project for my Software Development Bootcamp at NYU. The instructions were to create a game using HTML, CSS, and JavaScript. I always enjoyed playing quiz/trivia games to test my knowledge, and I thought it would be the perfect format to apply the skills I learned so far. My goal was to start simple and gradually make it more complex. Although I have many more ideas that I won't have time to implement, I may add them in the future. The code includes detailed comments to explain what I was doing. The layout is responsive and has been tested on an iPhone 14 Pro Max. The website features a simple design with black, purple, and grey color scheme.
 
-URL to play game: https://8cott.github.io/quiz-game/
+## Live Demo
+Play the game [here](https://8cott.github.io/quiz-game/).
 
-Inspiration:
-I always liked to play quiz/trivia games to test my knowledge and I thought it would be the perfect format to use the skills I learned so far in HTML, CSS, and Javascript. My goal was to start simple and then make it more complex as time allowed. I have so many more ideas that I won't have time for, but will try to add them in the future. 
+## Table of Contents
+- [Installation](#installation)
+- [Instructions](#instructions)
+- [License](#license)
+- [Credits](#credits)
+- [Contact Information](#contact-information)
 
-Notes:
-I used lots of tags in the code to explain what I was doing.
-The layout is responsive for mobile devices. Tested on an iPhone 14 Pro Max.
-I designed the website with a simple black, purple, and grey design. 
+## Installation
+1. Fork this repository and clone it to your local machine.
+2. Open the project in your preferred IDE.
+3. Run the HTML file in your browser (I use Visual Studio Code and open it using Live Server).
 
+## Instructions
+Game Flow:
+- The game starts automatically on page load.
+- The question is displayed in the center of the screen.
+- Below the question, you'll see the category (randomly selected) and the difficulty level (set to easy).
+- Click on one of the four possible answers, and the box will change to green for a correct answer and red for an incorrect answer.
+- If an incorrect answer is chosen, the correct answer will be displayed in the box below the choices.
+- At the bottom of the screen, the question number and score are displayed.
+- Each question is worth 10 points, with a maximum score of 100.
+- After answering 10 questions, the game is over, and the final score is displayed.
+- You will be given the option to start a new game.
+
+## License
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Credits
 Open Trivia API:
-This quiz uses randomly generated questions from the Open Trivia database at https://opentdb.com/. Credit is given in the footer.cx
+This quiz uses randomly generated questions from the [Open Trivia database](https://opentdb.com/). The questions are used under fair use. Credit is given in the footer.
 
-Instructions:
-Game starts on page load. 
-The question is displayed in the center.
-Below is the category (which is random) and difficulty level (set to easy).
-Click on one of the 4 possible answers and the box will change to green for correct and red for incorrect. 
-When an incorrect answer is chosen, the correct answer will be displayed in the box below the choices. 
-At the very bottom, the question number and score is displayed. 
-Each question is worth 10 points, with a maximum score of 100. 
-Once 10 questions have been answered, the game is over and final score is displayed. 
-You will be given the option to start a new game. 
-
+## Contact Information
+For any questions or feedback, please feel free to reach out to me:
+- Scott Rubin
+- Email: scottrubin@gmail.com
